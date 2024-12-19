@@ -1,0 +1,214 @@
+.custom-navbar {
+  margin: 2rem;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: -webkit-fill-available;
+  border-radius: 32px;
+  padding: 0.5rem 2rem;
+  z-index: 1030;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .nav-link {
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link.active {
+  color: #cb6040;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.65rem;
+}
+
+.custom-navbar .call-center-button {
+  background: linear-gradient(to right, #e9ac62, #fbd2a1);
+  background-size: 200% 100%; /* Memperbesar ukuran gradient */
+  background-position: left; /* Posisi awal */
+  color: black;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  transition: background-position 0.3s ease; /* Transisi pada posisi background */
+}
+
+.custom-navbar .call-center-button:hover {
+  background-position: right; /* Menggeser posisi gradient */
+}
+
+.custom-navbar .call-center-button p {
+  margin: 0 0 0 0.5rem;
+}
+
+.banner {
+  position: relative;
+  background-image: url("../image/banner.png"); /* Ganti dengan URL gambar Anda */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.banner-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.navbar-nav .nav-link {
+  color: black !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: rgba(203, 96, 64, 0.8) !important;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap transparan */
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2; /* Membuat konten di atas overlay */
+  text-align: center; /* Konten di tengah */
+}
+
+.banner-content img {
+  max-width: 100%;
+  height: auto; /* Gambar responsif */
+}
+
+.banner-text {
+  font-size: 1rem; /* Ukuran teks default */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+  .banner {
+    padding: 2rem 1rem; /* Tambahkan ruang di sekitar */
+  }
+
+  .banner-content {
+    max-width: 100%; /* Lebar penuh di perangkat kecil */
+  }
+
+  .banner-content img {
+    margin-top: 6rem; /* Sesuaikan margin */
+  }
+
+  .banner-text {
+    font-size: 0.7rem; /* Ukuran teks lebih kecil */
+    padding: 1rem; /* Padding lebih kecil */
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-content img {
+    margin-top: 4rem;
+  }
+
+  .banner-text {
+    font-size: 0.5rem; /* Teks lebih kecil lagi di perangkat sangat kecil */
+    padding: 0.8rem; /* Padding lebih kecil */
+  }
+
+  .banner-content p {
+    font-size: 0.8rem;
+  }
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider-item img {
+  width: 100%;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
